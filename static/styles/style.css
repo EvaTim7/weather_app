@@ -1,0 +1,11 @@
+body {
+    padding: 2rem;
+    background-color: #036881;
+    color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="{{url_for('static',filename='styles/style.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    {% if cod != 200 %}
+        <h2>Weather Details of City</h2>
+        <form action="/weather">
+            <input type="input" name="city" id="city" placeholder="Enter City"/>
+            <button type="submit">Submit</button>
+        </form>
+        <p>{{error}}. Please try again with valid city</p>
+    {% else %}
+        <h2>Weather Details of City</h2>
+        <form action="/weather">
+            <input type="input" name="city" id="city" placeholder="Enter City here"/>
+            <button type="submit">Submit</button>
+        </form>
+        <h3>{{city_name}}</h3>
+        <p>Temperature is {{temp}} &deg;C</p>
+    {% endif %}
+</body>
+</html>
